@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import CardList from "./component/CradList/cardList";
 
 function App() {
   const [monsters, setMonsters] = useState([]);
@@ -7,15 +8,12 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((users) => setMonsters(users));
+      .then((users) => setMonsters([...users, ...users]));
   }, []);
 
   return (
     <div className="App">
-      {monsters.map((monster) => {
-        console.log("monster", monster);
-        return <h1 key={monster.id}>{monster.name}</h1>;
-      })}
+      <CardList monsters={monsters} />
     </div>
   );
 }

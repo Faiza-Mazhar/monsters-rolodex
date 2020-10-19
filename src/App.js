@@ -19,14 +19,15 @@ function App() {
 
   return (
     <div className="App">
-      {console.log(monsters)}
-      <SearchBox
-        placeholder="Search Monsters"
-        handleChange={(event) => setSearchFieldInput(event.target.value)}
-      />
+      <h1>Cats</h1>
+      <SearchBox placeholder="Search Monsters" handleChange={handleChange()} />
       <CardList monsters={modifiedMonsters} />
     </div>
   );
+
+  function handleChange() {
+    return (event) => setSearchFieldInput(event.target.value);
+  }
 }
 
 export default App;

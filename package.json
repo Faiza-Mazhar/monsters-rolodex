@@ -2,7 +2,6 @@
   "name": "monsters-rolodex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Faiza-Mazhar.github.io/monsters-rolodex",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,6 +10,10 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3"
+  },
+  "engines": {
+    "yarn": "1.22.10",
+    "node": "10.17.0"
   },
   "scripts": {
     "start": "react-scripts start",
